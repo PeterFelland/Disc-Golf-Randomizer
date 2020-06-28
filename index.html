@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="author" content="Peter Felland">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Disc Golf Randomizer</title>
+</head>
+<body>
+	<br>
+	<div class="container">
+		<h1 id="Title">Disc Golf Throw Randomizer</h1>
+		<br>
+		<button id="randomize_button" class="btn btn-primary" onclick="randomize();">Randomize</button>
+		<br>
+		<br>
+		<div id="throw">???</div>
+	</div>
+<script>
+	function randomize() {
+		var throws = ["Backhand", "Flick", "Hammer", "Roller", "Thumber"];
+		var rng = Math.floor(Math.random() * 5);
+		document.getElementById("throw").innerHTML = throws[rng];
+	}
+</script>
+</body>
+</html>
+
