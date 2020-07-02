@@ -2,6 +2,29 @@
     text-align: center;
 }
 
+#title {
+	color: white;
+	-webkit-text-stroke: 1px black;
+}
+
 #throw {
-	font-size: 30px;
+	font-size: 36px;
+	color: white;
+	-webkit-text-stroke: 1px black;	
+}
+
+.jumbotron {
+	background: rgba(0, 0, 0, 0.5);
+	margin: auto;
+	width: 50%;
+	border-style: solid;
+	border-color: white;
+}
+
+body {
+	background-image: url('https://c1.wallpaperflare.com/preview/216/811/682/disc-golf-frisbee-game-frisbee-forest.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
