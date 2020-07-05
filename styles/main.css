@@ -22,6 +22,8 @@
 }
 
 body {
+	width: 100vw;
+	height: 100vh;
 	background-image: url('https://c1.wallpaperflare.com/preview/216/811/682/disc-golf-frisbee-game-frisbee-forest.jpg');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
