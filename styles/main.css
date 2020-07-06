@@ -3,14 +3,18 @@
 }
 
 #title {
-	color: white;
+	color: aqua;
+	position: absolute;
+  	top: 10%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
 	-webkit-text-stroke: 1px black;
 }
 
 #throw {
 	font-size: 36px;
 	color: white;
-	-webkit-text-stroke: 1px black;	
+	-webkit-text-stroke: 1px black;
 }
 
 .jumbotron {
@@ -18,15 +22,25 @@
 	margin: auto;
 	width: 50%;
 	border-style: solid;
-	border-color: white;
+	border-color: aqua;
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
 }
 
 body {
 	width: 100vw;
 	height: 100vh;
+}
+
+.bg-image {
 	background-image: url('https://c1.wallpaperflare.com/preview/216/811/682/disc-golf-frisbee-game-frisbee-forest.jpg');
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	filter: blur(7px);
+  	-webkit-filter: blur(7px);
+  	height: 95%;
 }
