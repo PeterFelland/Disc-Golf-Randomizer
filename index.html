@@ -15,8 +15,10 @@
 	<div class="container">
 		<h1 id="title">Disc Golf Throw Randomizer</h1>
 		<div class="jumbotron">
-			<div id="throw">???</div>
+			<button id="drives_button" class="btn btn-primary" onclick="toggleMode('drives');">Drives</button>
+			<button id="putts_button" class="btn btn-primary" onclick="toggleMode('putts');">Putts</button>	
 			<br>
+			<div id="throw">???</div>
 			<br>
 			<br>
 			<br>
@@ -24,11 +26,31 @@
 		</div>
 	</div>
 <script>
+	var toggle = "drives"; //Default toggle to drives
+	var rng = 0;
+
 	function randomize() {
-		var throws = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Close your Eyes", "Two vs. One", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "Behind Your Back", "Football Hike", "360 Throw", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Punt", "Shotgun", "Disc Marker", "Upside Down Disc", "Bowl"];
-		var rng = Math.floor(Math.random() * 26);
-		document.getElementById("throw").innerHTML = throws[rng];
+		var drives = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Close your Eyes", "Two vs. One", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "Behind Your Back", "Football Hike", "360 Throw", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Punt", "Shotgun", "Disc Marker", "Upside Down Disc", "Bowl"];
+		var putts = ["Backhand", "Flick", "Hammer", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Driver", "Close your Eyes", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Behind Your Back", "Football Hike", "360 Putt", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Kick your Disc", "Upside Down Putt"];
+		if(toggle == "drives") {
+			rng = Math.floor(Math.random() * 26);
+			document.getElementById("throw").innerHTML = drives[rng];
+		}
+		else {
+			rng = Math.floor(Math.random() * 19);
+			document.getElementById("throw").innerHTML = putts[rng];
+		}
 	}
+
+	function toggleMode(mode) {
+		if(mode == "drives") {
+			toggle = "drives";
+		}
+		if(mode == "putts") {
+			toggle = "putts";
+		}
+	}
+
 </script>
 </body>
 </html>

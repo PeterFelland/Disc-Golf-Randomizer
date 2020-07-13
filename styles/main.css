@@ -29,6 +29,20 @@
   	transform: translate(-50%, -50%);
 }
 
+#drives_button {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 47.5%;
+}
+
+#putts_button {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 47.5%;
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
