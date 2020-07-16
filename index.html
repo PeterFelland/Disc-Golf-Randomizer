@@ -45,9 +45,21 @@
 	function toggleMode(mode) {
 		if(mode == "drives") {
 			toggle = "drives";
+			document.getElementById("drives_button").style.color = "black";
+			document.getElementById("drives_button").style.fontWeight = "bold";
+			document.getElementById("drives_button").style.border = "solid";
+			document.getElementById("putts_button").style.color = "white";
+			document.getElementById("putts_button").style.fontWeight = "normal";
+			document.getElementById("putts_button").style.border = "none";
 		}
 		if(mode == "putts") {
 			toggle = "putts";
+			document.getElementById("putts_button").style.color = "black";
+			document.getElementById("putts_button").style.fontWeight = "bold";
+			document.getElementById("putts_button").style.border = "solid";
+			document.getElementById("drives_button").style.color = "white";
+			document.getElementById("drives_button").style.fontWeight = "normal";
+			document.getElementById("drives_button").style.border = "none";
 		}
 	}
 
