@@ -33,14 +33,24 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 47.5%;
+	width: 32%;
+	color: black;
+	font-weight: bold;
+	border: solid;
+}
+
+#midrange_button {
+	position: absolute;
+	top: 0px;
+	left: 34%;
+	width: 32%;
 }
 
 #putts_button {
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	width: 47.5%;
+	width: 32%;
 }
 
 body {
