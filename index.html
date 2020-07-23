@@ -15,9 +15,9 @@
 	<div class="container">
 		<h1 id="title">Disc Golf Throw Randomizer</h1>
 		<div class="jumbotron">
-			<button id="drives_button" class="btn btn-primary" onclick="toggleMode('drives');">Drives</button>
+			<button id="drive_button" class="btn btn-primary" onclick="toggleMode('drive');">Drive</button>
 			<button id="midrange_button" class="btn btn-primary" onclick="toggleMode('midrange');">Midrange</button>
-			<button id="putts_button" class="btn btn-primary" onclick="toggleMode('putts');">Putts</button>	
+			<button id="putt_button" class="btn btn-primary" onclick="toggleMode('putt');">Putt</button>	
 			<br>
 			<div id="throw">???</div>
 			<br>
@@ -27,63 +27,63 @@
 		</div>
 	</div>
 <script>
-	var toggle = "drives"; //Default toggle to drives
+	var toggle = "drive"; //Default toggle to drive
 	var rng = 0;
 
 	function randomize() {
-		var drives = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Close your Eyes", "Two vs. One", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "Behind Your Back", "Football Hike", "360 Throw", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Punt", "Shotgun", "Disc Marker", "Upside Down Disc", "Bowl"];
-		var midrange = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Close your Eyes", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "Behind Your Back", "Football Hike", "360 Throw", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Punt", "Shotgun", "Disc Marker", "Upside Down Disc", "Bowl"];
-		var putts = ["Backhand", "Flick", "Hammer", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Driver", "Close your Eyes", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Behind Your Back", "Football Hike", "360 Putt", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Kick your Disc", "Upside Down Putt"];
-		if(toggle == "drives") {
-			rng = Math.floor(Math.random() * 26);
-			document.getElementById("throw").innerHTML = drives[rng];
+		var drive = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Eyes Closed", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "360 Throw", "Under your Leg", "Face Backwards", "Throw 3 At Once - Pick Best", "Disc Marker", "Jumping Throw"];
+		var midrange = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Eyes Closed", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "Football Hike", "360 Throw", "Under your Leg", "Facing Backwards", "Disc Marker", "Upside Down Disc", "Jumping Throw"];
+		var putt = ["Backhand", "Flick", "Hammer", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Driver", "Eyes Closed", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Behind Your Back", "Football Hike", "360 Putt", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Punt", "Upside Down Disc", "Jumping Putt"];
+		if(toggle == "drive") {
+			rng = Math.floor(Math.random() * 20);
+			document.getElementById("throw").innerHTML = drive[rng];
 		}
 		else if(toggle == "midrange") {
-			rng = ath.floor(Math.random() * 25);
+			rng = Math.floor(Math.random() * 21);
 			document.getElementById("throw").innerHTML = midrange[rng];
 		}
 		else {
-			rng = Math.floor(Math.random() * 19);
-			document.getElementById("throw").innerHTML = putts[rng];
+			rng = Math.floor(Math.random() * 20);
+			document.getElementById("throw").innerHTML = putt[rng];
 		}
 	}
 
 	function toggleMode(mode) {
-		if(mode == "drives") {
-			toggle = "drives";
-			document.getElementById("drives_button").style.color = "black";
-			document.getElementById("drives_button").style.fontWeight = "bold";
-			document.getElementById("drives_button").style.border = "solid";
+		if(mode == "drive") {
+			toggle = "drive";
+			document.getElementById("drive_button").style.color = "black";
+			document.getElementById("drive_button").style.fontWeight = "bold";
+			document.getElementById("drive_button").style.border = "solid";
 			document.getElementById("midrange_button").style.color = "white";
 			document.getElementById("midrange_button").style.fontWeight = "normal";
 			document.getElementById("midrange_button").style.border = "none";
-			document.getElementById("putts_button").style.color = "white";
-			document.getElementById("putts_button").style.fontWeight = "normal";
-			document.getElementById("putts_button").style.border = "none";
+			document.getElementById("putt_button").style.color = "white";
+			document.getElementById("putt_button").style.fontWeight = "normal";
+			document.getElementById("putt_button").style.border = "none";
 		}
 		if(mode == "midrange") {
 			toggle = "midrange";
-			document.getElementById("drives_button").style.color = "white";
-			document.getElementById("drives_button").style.fontWeight = "normal";
-			document.getElementById("drives_button").style.border = "none";
+			document.getElementById("drive_button").style.color = "white";
+			document.getElementById("drive_button").style.fontWeight = "normal";
+			document.getElementById("drive_button").style.border = "none";
 			document.getElementById("midrange_button").style.color = "black";
 			document.getElementById("midrange_button").style.fontWeight = "bold";
 			document.getElementById("midrange_button").style.border = "solid";
-			document.getElementById("putts_button").style.color = "white";
-			document.getElementById("putts_button").style.fontWeight = "normal";
-			document.getElementById("putts_button").style.border = "none";
+			document.getElementById("putt_button").style.color = "white";
+			document.getElementById("putt_button").style.fontWeight = "normal";
+			document.getElementById("putt_button").style.border = "none";
 		}
-		if(mode == "putts") {
-			toggle = "putts";
-			document.getElementById("drives_button").style.color = "white";
-			document.getElementById("drives_button").style.fontWeight = "normal";
-			document.getElementById("drives_button").style.border = "none";
+		if(mode == "putt") {
+			toggle = "putt";
+			document.getElementById("drive_button").style.color = "white";
+			document.getElementById("drive_button").style.fontWeight = "normal";
+			document.getElementById("drive_button").style.border = "none";
 			document.getElementById("midrange_button").style.color = "white";
 			document.getElementById("midrange_button").style.fontWeight = "normal";
 			document.getElementById("midrange_button").style.border = "none";
-			document.getElementById("putts_button").style.color = "black";
-			document.getElementById("putts_button").style.fontWeight = "bold";
-			document.getElementById("putts_button").style.border = "solid";
+			document.getElementById("putt_button").style.color = "black";
+			document.getElementById("putt_button").style.fontWeight = "bold";
+			document.getElementById("putt_button").style.border = "solid";
 		}
 	}
 </script>
