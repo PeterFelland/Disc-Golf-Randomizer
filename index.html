@@ -31,19 +31,19 @@
 	var rng = 0;
 
 	function randomize() {
-		var drive = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Eyes Closed", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "360 Throw", "Under your Leg", "Face Backwards", "Throw 3 At Once - Pick Best", "Disc Marker", "Jumping Throw"];
-		var midrange = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Eyes Closed", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "Football Hike", "360 Throw", "Under your Leg", "Facing Backwards", "Disc Marker", "Upside Down Disc", "Jumping Throw"];
-		var putt = ["Backhand", "Flick", "Hammer", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Driver", "Eyes Closed", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Behind Your Back", "Football Hike", "360 Putt", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Punt", "Upside Down Disc", "Jumping Putt"];
+		var drive = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Eyes Closed", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "360 Throw", "Under your Leg", "Face Backwards", "Throw 3 At Once - Pick Best", "Disc Marker", "Jumping Throw", "Spin 10 Times", "Stutter Step", "Skipping Drive"];
+		var midrange = ["Backhand", "Flick", "Hammer", "Roller", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Putter", "Eyes Closed", "Stand Still", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Other Players Pick Your Disc", "Football Hike", "360 Throw", "Under your Leg", "Facing Backwards", "Disc Marker", "Upside Down Disc", "Jumping Throw", "Two-Handed Throw", "Skipping Midrange"];
+		var putt = ["Backhand", "Flick", "Hammer", "Left Handed Backhand", "Left Handed Flick", "Left Handed Hammer", "Use your Driver", "Eyes Closed", "Extra Long Run Up", "Throw While Kneeling", "Balance on One Leg", "Behind Your Back", "Football Hike", "360 Putt", "Under your Leg", "Pelvic Thrust", "Facing Backwards", "Punt", "Upside Down Disc", "Jumping Putt", "Hook Shot", "Granny Shot", "Shot Put"];
 		if(toggle == "drive") {
-			rng = Math.floor(Math.random() * 20);
+			rng = Math.floor(Math.random() * drive.length);
 			document.getElementById("throw").innerHTML = drive[rng];
 		}
 		else if(toggle == "midrange") {
-			rng = Math.floor(Math.random() * 21);
+			rng = Math.floor(Math.random() * midrange.length);
 			document.getElementById("throw").innerHTML = midrange[rng];
 		}
 		else {
-			rng = Math.floor(Math.random() * 20);
+			rng = Math.floor(Math.random() * putt.length);
 			document.getElementById("throw").innerHTML = putt[rng];
 		}
 	}
